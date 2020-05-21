@@ -1,7 +1,7 @@
 {
-  "name": "vue-mbrdr",
+  "name": "mbrdr-app",
+  "description": "Simple Online Editor for embroidery design",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,7 +9,7 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint && npm run lint:css",
     "lint:css": "stylelint '**/*.vue'",
-    "test": "npm run lint && npm run test:unit && npm run build && npm run test:e2e"
+    "test": "npm run lint && npm run test:unit && npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -44,5 +44,12 @@
     "stylelint-scss": "^3.4.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-template-compiler": "^2.6.11"
+  },
+  "author": "Simon Gattner <github@0x38.de>",
+  "homepage": "https://exiguus.github.io/app-mbrdr/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exiguus/app-mbrdr.git"
   }
 }

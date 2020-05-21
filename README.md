@@ -1,34 +1,12 @@
-# vue-gang
+# mbrdr app
 
-## Project setup
-```
-npm install
-```
+Simple Online Editor for *embroidery design*.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- You can edit a Current Canvas or add a new one to the bottom of the page.
+- Select a color from the Color Picker.
+- Fill the Canvas with Pixels.
+- Changes save automatically.
+- Changes are available from your Browser Storage the next Time.
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Visit: http://mbrdr.de/
