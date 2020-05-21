@@ -9,13 +9,19 @@
 </template>
 <script>
 import vNavigation from './Navigation.vue';
-import vHelp from './Help.vue';
+import vLoading from './Loading.vue';
 
 export default {
   name: 'vHeader',
   components: {
     vNavigation,
-    vHelp,
+    vHelp: () => ({
+      component: import('./Help.vue'),
+      delay: 200,
+      timeout: 10000,
+      loading: vLoading,
+      error: vLoading,
+    }),
   },
   props: {
     title: {

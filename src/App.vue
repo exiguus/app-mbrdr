@@ -16,13 +16,19 @@
 
 <script>
 import vHeader from './components/Header.vue';
-import vCanvas from './components/Canvas.vue';
+import vLoading from './components/Loading.vue';
 
 export default {
   name: 'App',
   components: {
     vHeader,
-    vCanvas,
+    vCanvas: () => ({
+      component: import('./components/Canvas.vue'),
+      delay: 200,
+      timeout: 10000,
+      loading: vLoading,
+      error: vLoading,
+    }),
   },
 };
 </script>
