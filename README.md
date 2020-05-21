@@ -8,5 +8,8 @@ Simple Online Editor for *embroidery design*.
 - Changes save automatically.
 - Changes are available from your Browser Storage the next Time.
 
+[![tests][tests]][tests-url]
+[Visit mbrdr](https://www.mbrdr.de/)
 
-Visit: http://mbrdr.de/
+[tests]: https://img.shields.io/travis/exiguus/app-mbrdr/master.svg
+[tests-url]: https://travis-ci.org/exiguus/app-mbrdr
