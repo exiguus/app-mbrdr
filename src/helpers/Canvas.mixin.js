@@ -10,7 +10,6 @@ export default function CanvasMixin(propertyName) {
         [propertyName]: {
           count: canvas.count,
           items: canvas.items,
-          color: canvas.color,
         },
       };
     },
@@ -24,6 +23,7 @@ export default function CanvasMixin(propertyName) {
 
       this[propertyName] = {
         ...canvas.init(),
+        color: '#ff0000',
         add: (name = 'Name') => {
           canvas.add(name);
           sync();

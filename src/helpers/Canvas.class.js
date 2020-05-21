@@ -12,8 +12,6 @@ export default class Canvas {
 
     this.count = this.items.length;
 
-    this.color = '#ff0000';
-
     this.defaults = {
       create: {
         count: 24,
@@ -31,7 +29,6 @@ export default class Canvas {
     return {
       count: this.items.length,
       items: this.items,
-      color: this.color,
     };
   }
 
