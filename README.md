@@ -2,6 +2,8 @@
 
 Simple Online Editor for *embroidery design*.
 
+![mbrdr-app](https://raw.githubusercontent.com/exiguus/app-mbrdr/master/mbrdr.gif)
+
 - You can edit a Current Canvas or add a new one to the bottom of the page.
 - Select a color from the Color Picker.
 - Fill the Canvas with Pixels.
