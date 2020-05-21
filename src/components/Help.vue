@@ -35,8 +35,6 @@ export default {
 <style scoped>
 article {
   display: block;
-  width: 100%;
-  margin: 0 1rem;
   padding: 1rem;
   text-align: left;
   background-color: rgba(255, 255, 255, .8);

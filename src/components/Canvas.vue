@@ -52,7 +52,13 @@ figure {
 
 figcaption {
   display: block;
-  padding: .6em 0 0;
+  padding: .6em .6em 0;
   text-transform: capitalize;
+}
+
+@media (min-width: 900px) {
+  figcaption {
+    padding-left: 0;
+  }
 }
 </style>

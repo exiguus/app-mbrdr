@@ -22,6 +22,7 @@
           pattern="[A-Za-z]+"
           ref="name"
           v-model="name"
+          v-on:keypress.enter="createCanvas"
         />
         <button
           v-if="showCreateName"
@@ -98,6 +99,7 @@ export default {
     },
     restoreCanvas() {
       this.$root.canvas.restore();
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     },
   },
 };
@@ -116,5 +118,16 @@ li {
   display: inline-block;
   padding: 0 .2em;
   vertical-align: top;
+}
+
+input,
+button {
+  margin-bottom: .2em;
+}
+
+@media (min-width: 900px) {
+  article {
+    width: 100%;
+  }
 }
 </style>

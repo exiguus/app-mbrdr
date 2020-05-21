@@ -11,6 +11,7 @@
         />
       </template>
     </main>
+    <vFooter />
   </div>
 </template>
 
@@ -25,6 +26,13 @@ export default {
     vCanvas: () => ({
       component: import('./components/Canvas.vue'),
       delay: 200,
+      timeout: 10000,
+      loading: vLoading,
+      error: vLoading,
+    }),
+    vFooter: () => ({
+      component: import('./components/Footer.vue'),
+      delay: 600,
       timeout: 10000,
       loading: vLoading,
       error: vLoading,
@@ -57,14 +65,15 @@ body {
 button,
 input {
   color: #666666;
-  font-size: .9rem;
+  font-size: 1.4rem;
   font-family: "Courier New", Courier, monospace;
   background-color: #ffffff;
   border: 1px solid #666666;
 }
 
 input {
-  height: 1.1em;
+  max-width: 12rem;
+  height: 1.6rem;
 }
 
 button:focus,
@@ -79,6 +88,17 @@ button:hover,
 input:hover {
   outline: 1px solid #666666;
 }
+
+@media (min-width: 900px) {
+  input,
+  button {
+    font-size: .9rem;
+  }
+
+  input {
+    height: 1rem;
+  }
+}
 </style>
 <style scoped>
 main {
@@ -89,9 +109,5 @@ main {
   margin: 0 auto;
   padding: 6em 0 4em 0;
   text-align: left;
-}
-
-article {
-  padding: 0 2em;
 }
 </style>

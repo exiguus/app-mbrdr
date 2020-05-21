@@ -48,10 +48,11 @@ header {
   margin: 0;
   padding: 0;
   color: #666666;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .9);
 }
 
 div {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 1em;
