@@ -2,7 +2,8 @@
   <article>
     <h2>About</h2>
     <p>
-      This is an <strong>online</strong> to edit your own <strong>embroidery design</strong>.
+      This is an <strong>app</strong> to create and edit your own
+      <strong>embroidery design</strong>.
     </p>
     <ul>
       <li>

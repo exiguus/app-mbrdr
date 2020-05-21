@@ -1,10 +1,10 @@
 <template>
-  <span ref="spinner" v-bind:style="styleSpinner()"></span>
+  <span v-bind:style="styleSpinner()"></span>
 </template>
 
 <script>
 export default {
-  name: 'Spinner',
+  name: 'vSpinner',
   props: {
     styleSpinner: {
       type: Function,

@@ -1,5 +1,5 @@
 <template>
-  <div ref="loading">
+  <div>
     <vSpinner v-bind:styleSpinner="styleSpinner"></vSpinner>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import vSpinner from './Spinner.vue';
 
 export default {
-  name: 'Loading',
+  name: 'vLoading',
   components: {
     vSpinner,
   },

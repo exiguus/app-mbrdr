@@ -6,7 +6,7 @@
         <vCanvas
           v-bind:data="item.data"
           v-bind:id="item.id"
-          v-bind:name="item.name || 'name'"
+          v-bind:name="item.name"
           v-bind:key="item.id"
         />
       </template>
