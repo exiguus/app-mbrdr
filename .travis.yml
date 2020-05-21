@@ -1,15 +1,23 @@
+sudo: false
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
   - node_modules
+branches:
+  only:
+  - master
+notifications:
+  email: false
+before_script:
+- npm prune
 script:
-  - npm test
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: dist
-  on:
-    branch: master
+- npm test
+after_success:
+- bash ./scripts/deploy.sh
+env:
+  global:
+  - GH_USER: exiguus
+  - GH_REPO: app-mbrdr
+  - secure: Dn+f50h6v3/tRrVK6lI+XvMc8KKvqaQtTgT+a+VdCnCblpTbTvsI/uE7PgqtsG4iFm4+3/EQo8X1p8XbXYRpGFLYH4XfmR9nSjI3x+XtqFCmeao0dSBRHWHoEkqJC2rFoeiKSXATyeqQM5oWhCDeFxXtIPmp2FLBS5+aBETdVKUQpnzzpQkDcV2AywFYQpkmeI2PXgwRSgSpOPsYHaVgFzQlvOjkdWsX7zOGSNjnu5z+Y6r8filtQDPcNGJw/4H/uRbcjT35ZiDBgB21Mp4zGjAdwbKmG27nGMJnJ6SZjKGXG4bppBYIDiUAkEbkMMQP0a8RCv5IYVbMZDsN0sYclDRedA8lCADo9M89jYChMkvgjrpLnpwWMqHT06QSyaz9aIAK3v+lFW9n60iPOEpe8I2Yhcj98PjugwgPoKOLwbLNB7pHYvUWqtAe4g9NVdBBxs7QKGrSBxV2pAu51HOc58fEmPNIGsRdYlUlHX7wRP6h6mjLYVYtZeLgFXGg58kwIs8jRucYg1a0abM0uv7XAQt08kQQcLWTwShOGqBdVegwtARMGctyDYH7uuhR18JLIr11a3SD/bmA4HxHn4Wn4wW271tNr17DHYyFn/+Pb1nD1YeIs9d3At2SzTkZ4mIIr7+yA0JGm+nzq5WOe1M1n4iHDkvalOVrv01MMha3h3E=
