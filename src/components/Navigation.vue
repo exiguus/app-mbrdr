@@ -91,15 +91,18 @@ export default {
     createCanvas() {
       this.showCreateName = false;
       this.$root.canvas.add(this.name);
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      this.scrollDown();
     },
     removeCanvas() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      this.scrollDown();
       this.$root.canvas.remove();
     },
     restoreCanvas() {
       this.$root.canvas.restore();
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      this.scrollDown();
+    },
+    scrollDown() {
+      this.$nextTick(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }));
     },
   },
 };
