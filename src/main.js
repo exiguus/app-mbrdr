@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import Canvas from './helpers/Canvas.mixin';
+import './registerServiceWorker';
 
 Vue.config.productionTip = false;
 const data = {

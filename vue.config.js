@@ -3,6 +3,8 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const zopfli = require('@gfx/zopfli');
 
+const { name } = require('./package-lock.json');
+
 let plugins = [];
 if (process.env.NODE_ENV === 'production') {
   const compressionTest = /\.(js|css|json|txt|html|ico|svg)$/i;
@@ -59,5 +61,30 @@ module.exports = {
   // },
   configureWebpack: {
     plugins,
+  },
+
+  pluginOptions: {
+    // https://www.npmjs.com/package/@vue/cli-plugin-pwa
+    // Generate: SW https://developers.google.com/web/tools/workbox/guides/generate-service-worker/cli
+    pwa: {
+      name,
+      themeColor: '#ffffff',
+      msTileColor: '#ff0000',
+      appleMobileWebAppCapable: 'yes',
+      appleMobileWebAppStatusBarStyle: 'white',
+
+      // configure the workbox plugin
+      workboxPluginMode: 'InjectManifest',
+      // https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin
+      workboxOptions: {
+        // swSrc is required in InjectManifest mode.
+        swSrc: 'src/registerServiceWorker.js',
+        // ...other Workbox options...
+        globDirectory: 'dist/',
+        globPatterns: [
+          '**/*.{css,br,gz,ico,png,svg,html,js,txt}',
+        ],
+      },
+    },
   },
 };
